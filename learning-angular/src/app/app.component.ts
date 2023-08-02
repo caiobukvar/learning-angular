@@ -18,8 +18,8 @@ export class AppComponent {
         experience: 'Just started'
       }
     ],
-    city: 'Jundiaí',
-    state: 'SP'
+    linkedin: 'https://www.linkedin.com/in/caiobukvar/',
+    github: 'https://github.com/caiobukvar'
   }
 
   hobbies = [

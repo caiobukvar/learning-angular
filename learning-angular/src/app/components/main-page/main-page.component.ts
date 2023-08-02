@@ -9,8 +9,8 @@ export class MainPageComponent implements OnInit {
   @Input() userData!: {
     name: string,
     frameworks: Array<{ name: string, experience: string }>,
-    city: string,
-    state: string
+    linkedin: string,
+    github: string,
   }
 
   @Input() hobbies!: Array<{
@@ -19,12 +19,26 @@ export class MainPageComponent implements OnInit {
   }>
 
   constructor() { }
-  show: boolean = false;
-  ngOnInit(): void {
+  showAboutMe: boolean = false;
+  showFindMe: boolean = false;
+  showHobbies: boolean = false;
 
+  ngOnInit(): void { }
+
+
+  openAboutMe(): void {
+    this.showAboutMe = !this.showAboutMe;
+    this.showFindMe = false;
+    this.showHobbies = false;
   }
-
-  openNavbar(): void {
-    this.show = !this.show;
+  openFindMe(): void {
+    this.showAboutMe = false;
+    this.showFindMe = !this.showFindMe;
+    this.showHobbies = false;
+  }
+  openHobbies(): void {
+    this.showAboutMe = false;
+    this.showFindMe = false;
+    this.showHobbies = !this.showHobbies;
   }
 }

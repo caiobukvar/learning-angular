@@ -1,31 +1,48 @@
 <div class="container">
-  <h1>{{userData.name}}</h1>
+  <h1>{{userData.name}} - Desenvolvedor Frontend</h1>
   <div class="info">
-    <div class="info__items">
-      <h3>Sobre mim</h3>
-      <p>
-        Olá! Sou um desenvolvedor frontend com experiência de
-        {{userData.frameworks[0].experience}} em
-        {{userData.frameworks[0].name}} e atualmente
-        aprendendo a utilizar o {{userData.frameworks[1].name}}.
-      </p>
-    </div>
+    <div class="nav">
+      <button [ngClass]="{'btn__info__active': showAboutMe, 'btn__info': showAboutMe === false}"
+        (click)="openAboutMe()">Sobre
+      </button>
 
-    <div class="info__items">
-      <h3>Localização</h3>
-      <p>Atualmente resido em {{userData.city}}, {{userData.state}}</p>
-    </div>
+      <div class="about__me" *ngIf="showAboutMe">
+        <h3>Sobre mim</h3>
+        <p>
+          Experiência de
+          {{userData.frameworks[0].experience}} em
+          {{userData.frameworks[0].name}} e atualmente
+          aprendendo a utilizar o framework {{userData.frameworks[1].name}}.
+        </p>
+      </div>
 
-    <button class='btn__next' (click)="openNavbar()">Saber mais</button>
-    <div class="hidden__component" *ngIf="show">
-      <h3>Hobbies:</h3>
-      <ul>
-        <li *ngFor="let hobby of hobbies">
-          <span>{{ hobby.name }}</span>
-        </li>
-      </ul>
-    </div>
+      <button [ngClass]="{'btn__info__active': showHobbies, 'btn__info': showHobbies === false}"
+        (click)="openHobbies()">Hobbies</button>
 
+      <div class="hobbies" *ngIf="showHobbies">
+        <h3>Hobbies:</h3>
+        <ul>
+          <li *ngFor="let hobby of hobbies">
+            <span>{{ hobby.name }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <button [ngClass]="{'btn__info__active': showFindMe, 'btn__info': showFindMe === false}"
+        (click)="openFindMe()">Onde me encontrar? </button>
+
+      <div class="find__me" *ngIf="showFindMe">
+        <h3>LinkedIn</h3>
+        <a href={{userData.linkedin}} target="_blank" rel="noopener noreferrer">
+          {{userData.linkedin}}
+        </a>
+        <h3>GitHub</h3>
+        <a href={{userData.github}} target="_blank" rel="noopener noreferrer">
+          {{userData.github}}
+        </a>
+      </div>
+
+    </div>
   </div>
 
 </div>
