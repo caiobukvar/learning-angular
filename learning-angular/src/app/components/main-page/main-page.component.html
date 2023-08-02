@@ -1,15 +1,31 @@
-<div>
+<div class="container">
   <h1>{{userData.name}}</h1>
-  <div>
-    <h3>Sobre mim</h3>
-    <p>
-      Olá! Sou um desenvolvedor frontend com experiência de {{userData.frameworks[0].experience}}
-      em {{userData.frameworks[0].name}} e atualmente aprendendo a utilizar {{userData.frameworks[1].name}}.
-    </p>
+  <div class="info">
+    <div class="info__items">
+      <h3>Sobre mim</h3>
+      <p>
+        Olá! Sou um desenvolvedor frontend com experiência de
+        {{userData.frameworks[0].experience}} em
+        {{userData.frameworks[0].name}} e atualmente
+        aprendendo a utilizar o {{userData.frameworks[1].name}}.
+      </p>
+    </div>
 
-    <h3>Localização</h3>
-    <p>Atualmente resido em {{userData.city}}, {{userData.state}}</p>
+    <div class="info__items">
+      <h3>Localização</h3>
+      <p>Atualmente resido em {{userData.city}}, {{userData.state}}</p>
+    </div>
+
+    <button class='btn__next' (click)="openNavbar()">Saber mais</button>
+    <div class="hidden__component" *ngIf="show">
+      <h3>Hobbies:</h3>
+      <ul>
+        <li *ngFor="let hobby of hobbies">
+          <span>{{ hobby.name }}</span>
+        </li>
+      </ul>
+    </div>
+
   </div>
 
-  <button>Saber mais</button>
 </div>

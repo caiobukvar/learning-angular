@@ -13,7 +13,18 @@ export class MainPageComponent implements OnInit {
     state: string
   }
 
-  constructor() { }
+  @Input() hobbies!: Array<{
+    id: number,
+    name: string
+  }>
 
-  ngOnInit(): void { }
+  constructor() { }
+  show: boolean = false;
+  ngOnInit(): void {
+
+  }
+
+  openNavbar(): void {
+    this.show = !this.show;
+  }
 }

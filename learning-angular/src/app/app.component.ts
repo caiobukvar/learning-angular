@@ -21,4 +21,23 @@ export class AppComponent {
     city: 'Jundiaí',
     state: 'SP'
   }
+
+  hobbies = [
+    {
+      id: 1,
+      name: 'Cozinhar'
+    },
+    {
+      id: 2,
+      name: 'Codar'
+    },
+    {
+      id: 3,
+      name: 'Jogar'
+    },
+    {
+      id: 4,
+      name: 'Conhecer restaurantes'
+    },
+  ]
 }
