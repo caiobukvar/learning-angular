@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'learning-angular';
+  userData = {
+    name: 'Caio Bukvar',
+    frameworks: [
+      {
+        name: 'React',
+        experience: '2 anos'
+      },
+      {
+        name: 'Angular',
+        experience: 'Just started'
+      }
+    ],
+    city: 'Jundiaí',
+    state: 'SP'
+  }
 }
