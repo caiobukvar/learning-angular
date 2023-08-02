@@ -11,11 +11,11 @@ export class AppComponent {
     frameworks: [
       {
         name: 'React',
-        experience: '2 anos'
+        level: 'Avançado'
       },
       {
         name: 'Angular',
-        experience: 'Just started'
+        level: 'Iniciante'
       }
     ],
     linkedin: 'https://www.linkedin.com/in/caiobukvar/',

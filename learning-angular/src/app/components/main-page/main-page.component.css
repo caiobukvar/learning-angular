@@ -41,35 +41,43 @@
 
 .about__me,
 .find__me,
-.hobbies {
+.hobbies,
+.frameworks {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 20px;
   padding: 20px;
   font-weight: 500;
 }
 
 .about__me>h3,
 .find__me>h3,
-.hobbies>h3 {
-  margin: 0;
+.hobbies>h3,
+.frameworks>h3 {
   color: #ECA72C;
 }
 
-.hobbies>ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
-.find__me>a {
+.find__me>div>a {
   color: #ECA72C;
   font-size: 1.2em;
   font-weight: 600;
   text-decoration: none;
 }
 
-.find__me>a:hover {
+.find__me>div>a:hover {
   text-decoration: underline;
+}
+
+.frameworks__1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.frameworks__2 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .btn__info,
@@ -97,4 +105,18 @@
 .btn__info__active:hover {
   cursor: pointer;
   background-color: rgba(49, 38, 62, .7);
+}
+
+.social__linkedin,
+.social__github {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.social__linkedin>img,
+.social__github>img {
+  height: 32px;
+  width: 32px;
 }
