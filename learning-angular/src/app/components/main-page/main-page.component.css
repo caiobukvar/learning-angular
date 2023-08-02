@@ -62,7 +62,14 @@
 }
 
 .find__me>a {
-  color: #fff;
+  color: #ECA72C;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.find__me>a:hover {
+  text-decoration: underline;
 }
 
 .btn__info,

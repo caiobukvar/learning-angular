@@ -20,7 +20,7 @@
         (click)="openHobbies()">Hobbies</button>
 
       <div class="hobbies" *ngIf="showHobbies">
-        <h3>Hobbies:</h3>
+        <h3>Hobbies</h3>
         <ul>
           <li *ngFor="let hobby of hobbies">
             <span>{{ hobby.name }}</span>
@@ -32,13 +32,12 @@
         (click)="openFindMe()">Onde me encontrar? </button>
 
       <div class="find__me" *ngIf="showFindMe">
-        <h3>LinkedIn</h3>
+
         <a href={{userData.linkedin}} target="_blank" rel="noopener noreferrer">
-          {{userData.linkedin}}
+          LinkedIn
         </a>
-        <h3>GitHub</h3>
         <a href={{userData.github}} target="_blank" rel="noopener noreferrer">
-          {{userData.github}}
+          GitHub
         </a>
       </div>
 

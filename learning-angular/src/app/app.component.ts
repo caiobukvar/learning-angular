@@ -29,7 +29,7 @@ export class AppComponent {
     },
     {
       id: 2,
-      name: 'Codar'
+      name: 'Programar'
     },
     {
       id: 3,
