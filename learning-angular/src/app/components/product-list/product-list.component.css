@@ -1,0 +1,44 @@
+.container {
+  padding: 20px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.table>tr {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  height: 32px;
+}
+
+.table>tr>td,
+.table>tr>th {
+  width: 100%;
+  text-align: start;
+}
+
+.td__last,
+.th__last {
+  text-align: center;
+}
+
+.btn__remove {
+  position: absolute;
+  background-color: unset;
+  border: none;
+  right: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.btn__remove:hover {
+  cursor: pointer;
+}

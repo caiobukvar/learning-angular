@@ -7,41 +7,7 @@ import { DatePipe } from '@angular/common';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  userData = {
-    name: 'Caio Bukvar',
-    frameworks: [
-      {
-        name: 'React',
-        level: 'Avançado'
-      },
-      {
-        name: 'Angular',
-        level: 'Iniciante'
-      }
-    ],
-    linkedin: 'https://www.linkedin.com/in/caiobukvar/',
-    github: 'https://github.com/caiobukvar'
-  }
-
-  hobbies = [
-    {
-      id: 1,
-      name: 'Cozinhar'
-    },
-    {
-      id: 2,
-      name: 'Programar'
-    },
-    {
-      id: 3,
-      name: 'Jogar'
-    },
-    {
-      id: 4,
-      name: 'Conhecer restaurantes'
-    },
-  ]
-
+  title = 'Learning Angular'
   date = new Date();
 
   constructor(private datePipe: DatePipe) { }
