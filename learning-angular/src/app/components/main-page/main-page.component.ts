@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-main-page',
@@ -6,49 +6,45 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
-  @Input() userData!: {
-    name: string,
-    frameworks: Array<{ name: string, level: string }>,
-    linkedin: string,
-    github: string,
+  userData = {
+    name: 'Caio Bukvar',
+    frameworks: [
+      {
+        name: 'React',
+        level: 'Avançado'
+      },
+      {
+        name: 'Angular',
+        level: 'Iniciante'
+      }
+    ],
+    linkedin: 'https://www.linkedin.com/in/caiobukvar/',
+    github: 'https://github.com/caiobukvar'
   }
 
-  @Input() hobbies!: Array<{
-    id: number,
-    name: string
-  }>
+  hobbies = [
+    {
+      id: 1,
+      name: 'Cozinhar'
+    },
+    {
+      id: 2,
+      name: 'Programar'
+    },
+    {
+      id: 3,
+      name: 'Jogar'
+    },
+    {
+      id: 4,
+      name: 'Conhecer restaurantes'
+    },
+  ]
 
   constructor() { }
-  showAboutMe: boolean = false;
-  showExperience: boolean = false;
-  showFindMe: boolean = false;
-  showHobbies: boolean = false;
 
   ngOnInit(): void { }
 
 
-  openAboutMe(): void {
-    this.showAboutMe = !this.showAboutMe;
-    this.showExperience = false;
-    this.showFindMe = false;
-    this.showHobbies = false;
-  }
-  openExperience(): void {
-    this.showAboutMe = false;
-    this.showExperience = !this.showExperience;
-    this.showFindMe = false;
-    this.showHobbies = false;
-  }
-  openFindMe(): void {
-    this.showAboutMe = false;
-    this.showExperience = false;
-    this.showFindMe = !this.showFindMe;
-    this.showHobbies = false;
-  }
-  openHobbies(): void {
-    this.showAboutMe = false;
-    this.showExperience = false;
-    this.showFindMe = false;
-    this.showHobbies = !this.showHobbies;
-  }
+ 
 }
