@@ -21,7 +21,7 @@ export class ProductListComponent {
         break;
       }
     }
-
+    localStorage.setItem('products', JSON.stringify(this.products));
     return this.products;
   }
 }
