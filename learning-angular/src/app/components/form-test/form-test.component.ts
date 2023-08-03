@@ -34,6 +34,15 @@ export class FormTestComponent implements OnInit {
       console.log(this.products);
     }
   }
+
+  renderProducts() {
+    const productList = this.products.map(product => ({
+      productName: product.productName,
+      productAmount: product.productAmount
+    }));
+    return productList;
+  }
+
 }
 interface Product {
   productName: string;
