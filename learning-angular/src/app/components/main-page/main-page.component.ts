@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class MainPageComponent implements OnInit {
   @Input() userData!: {
     name: string,
-    frameworks: Array<{ name: string, experience: string }>,
+    frameworks: Array<{ name: string, level: string }>,
     linkedin: string,
     github: string,
   }
@@ -20,6 +20,7 @@ export class MainPageComponent implements OnInit {
 
   constructor() { }
   showAboutMe: boolean = false;
+  showExperience: boolean = false;
   showFindMe: boolean = false;
   showHobbies: boolean = false;
 
@@ -28,16 +29,25 @@ export class MainPageComponent implements OnInit {
 
   openAboutMe(): void {
     this.showAboutMe = !this.showAboutMe;
+    this.showExperience = false;
+    this.showFindMe = false;
+    this.showHobbies = false;
+  }
+  openExperience(): void {
+    this.showAboutMe = false;
+    this.showExperience = !this.showExperience;
     this.showFindMe = false;
     this.showHobbies = false;
   }
   openFindMe(): void {
     this.showAboutMe = false;
+    this.showExperience = false;
     this.showFindMe = !this.showFindMe;
     this.showHobbies = false;
   }
   openHobbies(): void {
     this.showAboutMe = false;
+    this.showExperience = false;
     this.showFindMe = false;
     this.showHobbies = !this.showHobbies;
   }

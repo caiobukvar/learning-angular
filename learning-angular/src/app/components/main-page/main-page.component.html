@@ -9,11 +9,34 @@
       <div class="about__me" *ngIf="showAboutMe">
         <h3>Sobre mim</h3>
         <p>
-          Experiência de
-          {{userData.frameworks[0].experience}} em
-          {{userData.frameworks[0].name}} e atualmente
-          aprendendo a utilizar o framework {{userData.frameworks[1].name}}.
+          Empenhado em aprimorar meus conhecimentos em desenvolvimento, tanto para o meu próprio
+          crescimento quanto para compartilhar com os outros. Minha abordagem é caracterizada
+          por responsabilidade, persuasão e uma busca incansável por desenvolvimento pessoal.
+
         </p>
+        <p> Tanto trabalhando individualmente como em equipe, meu objetivo é sempre entregar o meu
+          melhor em todas as tarefas. Tenho um olhar atento aos detalhes que podem impactar o desenvolvimento,
+          e sou habilidoso em encontrar soluções eficazes.
+        </p>
+      </div>
+
+      <button [ngClass]="{'btn__info__active': showExperience, 'btn__info': showExperience === false}"
+        (click)="openExperience()">Experiência</button>
+
+      <div class="frameworks" *ngIf="showExperience">
+        <h3>Frameworks</h3>
+        <div class="frameworks__1">
+          <p *ngFor="let framework of userData.frameworks">
+            <strong>{{ framework.name }}</strong> - {{framework.level}}
+          </p>
+        </div>
+        <h3>Geral</h3>
+        <p>Em termos de metodologias ágeis, estou familiarizado com o ClickUp, Jira, Trello, Slack e Discord.</p>
+
+        <p>Tenho experiência sólida na leitura e desenvolvimento de layouts criados no Figma,
+          garantindo a fidelidade visual e funcionalidade dos projetos desenvolvidos.</p>
+
+
       </div>
 
       <button [ngClass]="{'btn__info__active': showHobbies, 'btn__info': showHobbies === false}"
@@ -33,14 +56,20 @@
 
       <div class="find__me" *ngIf="showFindMe">
 
-        <a href={{userData.linkedin}} target="_blank" rel="noopener noreferrer">
-          LinkedIn
-        </a>
-        <a href={{userData.github}} target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
-      </div>
+        <div class="social__linkedin">
+          <img src="assets/images/icons/linkedin.svg" alt="linkedin">
+          <a href={{userData.linkedin}} target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </div>
 
+        <div class="social__github">
+          <img src="assets/images/icons/github.svg" alt="github">
+          <a href={{userData.github}} target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 
