@@ -1,3 +1,11 @@
+:root {
+  --english-violet: #44355bff;
+  --dark-purple: #31263eff;
+  --raisin-black: #221e22ff;
+  --hunyadi-yellow: #eca72cff;
+  --flame: #ee5622ff;
+}
+
 .users {
   display: flex;
   flex-wrap: wrap;
@@ -13,7 +21,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid orange;
+  gap: 20px;
+  border: 1px solid #ee5622ff;
+  font-weight: 600;
   border-radius: 8px;
   padding: 20px;
   width: 180px;
@@ -24,4 +34,15 @@
 .user>img {
   width: 90px;
   height: 90px;
+  border-radius: 50%;
+}
+
+.user>a {
+  font-weight: 400;
+  color: #eca72cff;
+  text-decoration: none;
+}
+
+.user>a:hover {
+  text-decoration: underline;
 }

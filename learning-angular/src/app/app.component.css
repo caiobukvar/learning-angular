@@ -6,10 +6,6 @@
   --flame: #ee5622ff;
 }
 
-.date>p {
-  text-align: center;
-}
-
 .navbar {
   display: flex;
   justify-content: center;
@@ -32,5 +28,13 @@
   text-decoration: none;
   font-weight: 600;
   width: 150px;
+  text-align: center;
+}
+
+.date {
+  margin-top: 50px;
+}
+
+.date>p {
   text-align: center;
 }

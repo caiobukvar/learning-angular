@@ -2,7 +2,7 @@
   <div *ngFor="let user of users" class="user">
     <img src={{user.avatar_url}} alt="">
 
-    <p>username: {{ user.login }}</p>
+    <h3>{{ user.login }}</h3>
     <a href={{user.url}} target="_blank" rel="noopener noreferrer">check {{ user.login }}'s profile</a>
 
   </div>
