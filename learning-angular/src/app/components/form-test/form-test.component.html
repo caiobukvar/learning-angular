@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="container__bg">
+    <form action="" class="form">
+      <label for="name">Nome do produto</label>
+      <input type="text" [(ngModel)]="name" name="name" id="name" placeholder="Insira o nome do produto">
+
+      <label for="amount">Quantidade</label>
+      <input type="number" [(ngModel)]="amount" name="amount">
+      <div *ngIf="name !== '' && amount > 0">
+        <p>Dados a inserir: {{name}}, {{amount}}</p>
+      </div>
+      <button type="submit" (click)="handleClick()">Adicionar </button>
+    </form>
+
+    <app-product-list [products]="renderProducts()"></app-product-list>
+  </div>
+</div>
