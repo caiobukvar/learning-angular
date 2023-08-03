@@ -11,6 +11,12 @@ export class GithubUserSearchComponent implements OnInit {
   users: GitHubUsers[] = [
     { login: '', url: '', avatar_url: '' }
   ]
+  usernameToSearch = ''
+  filteredUser: GitHubUsers[] = [
+    { login: '', url: '', avatar_url: '' }
+  ]
+
+
 
   constructor(private getUserService: GetUserService) {
     //aqui roda a função para carregar os dados do github automaticamente ao acessar a página /github-users
@@ -19,7 +25,17 @@ export class GithubUserSearchComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  getUsers(): void {
-    this.getUserService.getGithubUser().subscribe((users) => (this.users = users))
+  handleUsername(event: any): void {
+    this.usernameToSearch = event.target.value;
   }
+
+  getUsers(): void {
+    this.getUserService.getGithubUser().subscribe((users) => this.users = users)
+  }
+  getGithubUserByLogin(): void {
+    this.getUserService.getGithubUserByUsername(this.usernameToSearch).subscribe((users) => {
+      this.filteredUser = users;
+    })
+  }
+
 }

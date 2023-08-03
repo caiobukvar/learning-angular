@@ -6,6 +6,36 @@
   --flame: #ee5622ff;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.search__input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.search__input>div {
+  display: flex;
+  gap: 10px;
+}
+
+.search__input>div>button {
+  height: 40px;
+  width: 120px;
+  background-color: #eca72cff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .users {
   display: flex;
   flex-wrap: wrap;
@@ -13,7 +43,6 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-top: 50px;
 }
 
 .user {
@@ -45,4 +74,12 @@
 
 .user>a:hover {
   text-decoration: underline;
+}
+
+label {
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
 }

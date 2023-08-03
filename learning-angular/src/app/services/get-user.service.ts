@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { GitHubUsers } from '../GitHubUsers';
@@ -8,12 +7,11 @@ import { GitHubUsers } from '../GitHubUsers';
   providedIn: 'root'
 })
 export class GetUserService {
-  page: number = 0;
   per_page: number = 10;
   private apiUrl: string;
 
   constructor(private http: HttpClient) {
-    this.apiUrl = `https://api.github.com/users${this.per_page !== 0 ? `?per_page=${this.per_page} ` : ''}${this.page !== 0 ? `?since=${this.page} ` : ''}`
+    this.apiUrl = `https://api.github.com/users`
   }
 
   getGithubUser(): Observable<GitHubUsers[]> {
@@ -22,6 +20,19 @@ export class GetUserService {
       .append('Content-Type', 'application/json')
       .append('Authorization', `Bearer ${token}`);
 
-    return this.http.get<GitHubUsers[]>(this.apiUrl)
+    const searchUrl = `${this.apiUrl}${this.per_page !== 0 ? `?per_page=${this.per_page} ` : ''}`;
+
+    return this.http.get<GitHubUsers[]>(searchUrl)
+  }
+
+  getGithubUserByUsername(login: string): Observable<GitHubUsers[]> {
+    const token = '';
+    const headers = new HttpHeaders()
+      .append('Content-Type', 'application/json')
+      .append('Authorization', `Bearer ${token}`);
+
+    const searchUrl = `${this.apiUrl}?q=${login}`;
+
+    return this.http.get<GitHubUsers[]>(searchUrl);
   }
 }
