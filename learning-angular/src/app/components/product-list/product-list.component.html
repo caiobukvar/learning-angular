@@ -3,12 +3,16 @@
     <table class="table">
       <tr>
         <th>Nome do produto</th>
-        <th>Quantidade</th>
+        <th class="th__last">Quantidade</th>
       </tr>
       <tr *ngFor="let product of products">
         <td>{{product.productName}}</td>
-        <td>{{product.productAmount}}</td>
+        <td class="td__last">{{product.productAmount}}</td>
+        <button class="btn__remove">
+          <button>x</button>
+        </button>
       </tr>
+
     </table>
   </div>
 </div>
