@@ -1,6 +1,8 @@
 <div class="container">
-  <h1>{{userData.name}} </h1>
-  <h2>Desenvolvedor Frontend</h2>
+  <div class="header">
+    <h1>{{userData.name }} </h1>
+    <h2>Desenvolvedor Frontend</h2>
+  </div>
   <div class="info">
     <div class="nav">
       <button [ngClass]="{'btn__info__active': showAboutMe, 'btn__info': showAboutMe === false}"
