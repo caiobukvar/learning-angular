@@ -13,6 +13,7 @@ export class GithubUserSearchComponent implements OnInit {
   ]
 
   constructor(private getUserService: GetUserService) {
+    //aqui roda a função para carregar os dados do github automaticamente ao acessar a página /github-users
     this.getUsers()
   }
 
