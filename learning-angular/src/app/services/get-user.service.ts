@@ -31,7 +31,7 @@ export class GetUserService {
       .append('Content-Type', 'application/json')
       .append('Authorization', `Bearer ${token}`);
 
-    const searchUrl = `${this.apiUrl}?q=${login}`;
+    const searchUrl = `${this.apiUrl}/${login}`;
 
     return this.http.get<GitHubUsers[]>(searchUrl);
   }
