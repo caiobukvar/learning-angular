@@ -8,8 +8,13 @@ import { GitHubUsers } from '../GitHubUsers';
   providedIn: 'root'
 })
 export class GetUserService {
-  private apiUrl = 'https://api.github.com/users'
-  constructor(private http: HttpClient) { }
+  page: number = 0;
+  per_page: number = 10;
+  private apiUrl: string;
+
+  constructor(private http: HttpClient) {
+    this.apiUrl = `https://api.github.com/users${this.per_page !== 0 ? `?per_page=${this.per_page} ` : ''}${this.page !== 0 ? `?since=${this.page} ` : ''}`
+  }
 
   getGithubUser(): Observable<GitHubUsers[]> {
     const token = ''
