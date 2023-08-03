@@ -13,8 +13,16 @@
   padding: 0;
 }
 
-.container>h1 {
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.header>h1 {
   color: #EE5622;
+  margin: 0;
 }
 
 .info {
