@@ -1,0 +1,86 @@
+.container__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about__me,
+.find__me,
+.hobbies,
+.frameworks {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.about__me>h3,
+.find__me>h3,
+.hobbies>h3,
+.frameworks>h3 {
+  color: #ECA72C;
+}
+
+.find__me>div>a {
+  color: #ECA72C;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.find__me>div>a:hover {
+  text-decoration: underline;
+}
+
+.frameworks__1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.frameworks>p,
+.frameworks__1>p {
+  margin: 0;
+}
+
+.btn__info,
+.btn__info__active {
+  padding: 10px;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.btn__info {
+  background-color: rgb(68, 53, 91);
+}
+
+.btn__info__active {
+  background-color: rgba(49, 38, 62);
+}
+
+.btn__info:hover {
+  cursor: pointer;
+  background-color: rgba(68, 53, 91, .7);
+}
+
+.btn__info__active:hover {
+  cursor: pointer;
+  background-color: rgba(49, 38, 62, .7);
+}
+
+.social__linkedin,
+.social__github {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.social__linkedin>img,
+.social__github>img {
+  height: 32px;
+  width: 32px;
+}

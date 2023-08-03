@@ -1,4 +1,9 @@
-<app-main-page [userData]="userData" [hobbies]="hobbies"></app-main-page>
+<nav>
+  <a routerLink="/">Home</a>
+  <a routerLink="/form-test">Form Testing</a>
+  <a routerLink="/github-user">Github User Search</a>
+</nav>
+<router-outlet></router-outlet>
 <div class="date">
   <p>{{getFormattedDate()}}</p>
 </div>

@@ -1,0 +1,18 @@
+<div class="container">
+  <div *ngIf="products">
+    <table class="table">
+      <tr>
+        <th>Nome do produto</th>
+        <th class="th__last">Quantidade</th>
+      </tr>
+      <tr *ngFor="let product of products">
+        <td>{{product.productName}}</td>
+        <td class="td__last">{{product.productAmount}}</td>
+        <button class="btn__remove" (click)="removeProduct(product.productName)">
+          <img src=" ../../../assets/images/icons/close-circle-outline.svg" alt="btn close">
+        </button>
+      </tr>
+
+    </table>
+  </div>
+</div>

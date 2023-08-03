@@ -1,0 +1,59 @@
+:root {
+  --english-violet: #44355bff;
+  --dark-purple: #31263eff;
+  --raisin-black: #221e22ff;
+  --hunyadi-yellow: #eca72cff;
+  --flame: #ee5622ff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__bg {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid #ee5622ff;
+  border-radius: 12px;
+  width: 350px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.form>label {
+  align-self: flex-start;
+  font-weight: 600;
+  color: #ee5622ff;
+}
+
+.form>input {
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+}
+
+.form>button {
+  width: 100px;
+  height: 40px;
+  background-color: #44355bff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+}
