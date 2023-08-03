@@ -1,0 +1,23 @@
+.users {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-wrap: normal;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid orange;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.user>img {
+  width: 128px;
+  height: 128px;
+}

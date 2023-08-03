@@ -9,7 +9,7 @@ import { GetUserService } from 'src/app/services/get-user.service';
 })
 export class GithubUserSearchComponent implements OnInit {
   users: GitHubUsers[] = [
-    { login: '', name: '', avatar_url: '' }
+    { login: '', url: '', avatar_url: '' }
   ]
 
   constructor(private getUserService: GetUserService) {
@@ -19,8 +19,6 @@ export class GithubUserSearchComponent implements OnInit {
   ngOnInit(): void { }
 
   getUsers(): void {
-    console.log('entrei')
-
     this.getUserService.getGithubUser().subscribe((users) => (this.users = users))
   }
 }
