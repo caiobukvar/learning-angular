@@ -8,19 +8,12 @@ import { GetUserService } from 'src/app/services/get-user.service';
   styleUrls: ['./github-user-search.component.css']
 })
 export class GithubUserSearchComponent implements OnInit {
-  users: GitHubUsers[] = [
-    { login: '', url: '', avatar_url: '' }
-  ]
-  usernameToSearch = ''
-  filteredUser: GitHubUsers[] = [
-    { login: '', url: '', avatar_url: '' }
-  ]
-
-
+  users: GitHubUsers[] = [];
+  usernameToSearch = '';
+  filteredUser: GitHubUsers | null = null; // o nulo serve para indicar que não existe um user filtrado
 
   constructor(private getUserService: GetUserService) {
-    //aqui roda a função para carregar os dados do github automaticamente ao acessar a página /github-users
-    this.getUsers()
+    this.getUsers();
   }
 
   ngOnInit(): void { }
@@ -30,12 +23,16 @@ export class GithubUserSearchComponent implements OnInit {
   }
 
   getUsers(): void {
-    this.getUserService.getGithubUser().subscribe((users) => this.users = users)
-  }
-  getGithubUserByLogin(): void {
-    this.getUserService.getGithubUserByUsername(this.usernameToSearch).subscribe((users) => {
-      this.filteredUser = users;
-    })
+    this.getUserService.getGithubUser().subscribe((users) => (this.users = users));
   }
 
+  getGithubUserByLogin(): void {
+    if (this.usernameToSearch.trim() !== '') {
+      this.getUserService.getGithubUserByUsername(this.usernameToSearch).subscribe((user) => {
+        this.filteredUser = user.length > 0 ? user[0] : null;
+      });
+    } else {
+      this.filteredUser = null; 
+    }
+  }
 }
