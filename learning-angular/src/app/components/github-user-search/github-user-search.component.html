@@ -13,14 +13,16 @@
     <div *ngIf="filteredUser; else allUsers" class="user">
       <img src={{filteredUser.avatar_url}} alt="">
       <h3>{{ filteredUser.login }}</h3>
-      <a href={{filteredUser.url}} target="_blank" rel="noopener noreferrer">check {{ filteredUser.login }}'s
+      <a [href]="'http://www.github.com/' + filteredUser.login" target="_blank" rel="noopener noreferrer">check {{
+        filteredUser.login }}'s
         profile</a>
     </div>
     <ng-template #allUsers>
       <div *ngFor="let user of users" class="user">
         <img src={{user.avatar_url}} alt="">
         <h3>{{ user.login }}</h3>
-        <a href={{user.url}} target="_blank" rel="noopener noreferrer">check {{ user.login }}'s profile</a>
+        <a [href]="'http://www.github.com/' + user.login" target="_blank" rel="noopener noreferrer">check {{ user.login
+          }}'s profile</a>
       </div>
     </ng-template>
   </div>
