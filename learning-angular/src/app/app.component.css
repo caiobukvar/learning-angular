@@ -42,4 +42,5 @@
 
 .mat-divider {
   height: 15px;
+  border-right-color: #eca72cff !important;
 }
