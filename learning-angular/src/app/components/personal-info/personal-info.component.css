@@ -19,6 +19,7 @@
 .find__me>h3,
 .hobbies>h3,
 .frameworks>h3 {
+  font-weight: 600;
   color: #ECA72C;
 }
 

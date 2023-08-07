@@ -23,6 +23,11 @@
 .header>h1 {
   color: #EE5622;
   margin: 0;
+  font-weight: 600;
+}
+
+.header>h2 {
+  text-decoration: underline;
 }
 
 .info {
@@ -43,4 +48,3 @@
 .info>button {
   align-self: center;
 }
-
