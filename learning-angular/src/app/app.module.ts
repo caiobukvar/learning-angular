@@ -12,6 +12,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { GithubUserSearchComponent } from './components/github-user-search/github-user-search.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialComponent } from './components/angular-material/angular-material.component';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { AngularMaterialComponent } from './components/angular-material/angular-
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatDividerModule
   ],
   providers: [
     DatePipe

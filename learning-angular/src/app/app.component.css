@@ -39,3 +39,7 @@
 .date>p {
   text-align: center;
 }
+
+.mat-divider {
+  height: 15px;
+}
