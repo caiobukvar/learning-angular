@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GitHubUsers } from 'src/app/GitHubUsers';
+import { GitHubUser } from 'src/app/GitHubUser';
 import { GetUserService } from 'src/app/services/get-user.service';
 
 @Component({
@@ -8,9 +8,9 @@ import { GetUserService } from 'src/app/services/get-user.service';
   styleUrls: ['./github-user-search.component.css']
 })
 export class GithubUserSearchComponent implements OnInit {
-  users: GitHubUsers[] = [];
+  users: GitHubUser[] = [];
   usernameToSearch = '';
-  filteredUser: GitHubUsers | null = null; // o nulo serve para indicar que não existe um user filtrado
+  filteredUser: GitHubUser | null = null; // o nulo serve para indicar que não existe um user filtrado
 
   constructor(private getUserService: GetUserService) {
     this.getUsers();
