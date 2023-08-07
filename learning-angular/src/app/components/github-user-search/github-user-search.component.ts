@@ -29,10 +29,10 @@ export class GithubUserSearchComponent implements OnInit {
   getGithubUserByLogin(): void {
     if (this.usernameToSearch.trim() !== '') {
       this.getUserService.getGithubUserByUsername(this.usernameToSearch).subscribe((user) => {
-        this.filteredUser = user.length > 0 ? user[0] : null;
+        this.filteredUser = user ? user : null;
       });
     } else {
-      this.filteredUser = null; 
+      this.filteredUser = null;
     }
   }
 }

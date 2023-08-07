@@ -25,7 +25,7 @@ export class GetUserService {
     return this.http.get<GitHubUsers[]>(searchUrl)
   }
 
-  getGithubUserByUsername(login: string): Observable<GitHubUsers[]> {
+  getGithubUserByUsername(login: string): Observable<GitHubUsers> {
     const token = '';
     const headers = new HttpHeaders()
       .append('Content-Type', 'application/json')
@@ -33,6 +33,6 @@ export class GetUserService {
 
     const searchUrl = `${this.apiUrl}/${login}`;
 
-    return this.http.get<GitHubUsers[]>(searchUrl);
+    return this.http.get<GitHubUsers>(searchUrl);
   }
 }

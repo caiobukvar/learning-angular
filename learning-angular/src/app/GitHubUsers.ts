@@ -1,4 +1,3 @@
-
 export interface GitHubUsers {
   login: string
   url: string
