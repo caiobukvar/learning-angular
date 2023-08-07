@@ -1,8 +1,40 @@
-.date>p {
+:root {
+  --english-violet: #44355bff;
+  --dark-purple: #31263eff;
+  --raisin-black: #221e22ff;
+  --hunyadi-yellow: #eca72cff;
+  --flame: #ee5622ff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #44355bff;
+}
+
+.navbar>nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  width: 100%;
+  padding: 10px;
+  color: #eca72cff;
+}
+
+.navbar>nav>a {
+  color: #eca72cff;
+  text-decoration: none;
+  font-weight: 600;
+  width: 150px;
   text-align: center;
 }
 
-.nav {
-  display: flex;
-  gap: 10px;
+.date {
+  margin-top: 50px;
+}
+
+.date>p {
+  text-align: center;
 }

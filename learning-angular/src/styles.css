@@ -1,10 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 * {
   padding: 0;
+  margin: 0;
   font-family: 'Poppins', sans-serif;
 }
 
 body {
   color: #fff;
   background-color: #221E22;
+}
+
+input {
+  height: 40px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
 }
