@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainPageComponent } from './components/main-page/main-page.component';
-import { FormTestComponent } from './components/form-test/form-test.component';
-import { GithubUserSearchComponent } from './components/github-user-search/github-user-search.component';
+import { MainPageComponent } from './components/pages/main-page/main-page.component';
+import { FormTestComponent } from './components/pages/form-test/form-test.component';
+import { GithubUserSearchComponent } from './components/pages/github-user-search/github-user-search.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },

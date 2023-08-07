@@ -4,14 +4,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatCommonModule } from '@angular/material/core';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatButtonModule } from '@angular/material/button';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormTestComponent } from './components/form-test/form-test.component';
-import { GithubUserSearchComponent } from './components/github-user-search/github-user-search.component';
-import { MainPageComponent } from './components/main-page/main-page.component';
+import { GithubUserSearchComponent } from './components/pages/github-user-search/github-user-search.component';
+import { MainPageComponent } from './components/pages/main-page/main-page.component';
+import { FormTestComponent } from './components/pages/form-test/form-test.component';
 import { PersonalInfoComponent } from './components/personal-info/personal-info.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 
@@ -30,10 +29,8 @@ import { ProductListComponent } from './components/product-list/product-list.com
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-
     MatCommonModule,
     MatDividerModule,
-    MatButtonModule
   ],
   providers: [
     DatePipe
