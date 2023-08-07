@@ -10,6 +10,8 @@ import { FormTestComponent } from './components/form-test/form-test.component';
 import { PersonalInfoComponent } from './components/personal-info/personal-info.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { GithubUserSearchComponent } from './components/github-user-search/github-user-search.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialComponent } from './components/angular-material/angular-material.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,15 @@ import { GithubUserSearchComponent } from './components/github-user-search/githu
     FormTestComponent,
     PersonalInfoComponent,
     ProductListComponent,
-    GithubUserSearchComponent
+    GithubUserSearchComponent,
+    AngularMaterialComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     DatePipe

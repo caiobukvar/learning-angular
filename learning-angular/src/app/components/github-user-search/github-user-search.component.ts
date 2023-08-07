@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GitHubUser } from 'src/app/GitHubUser';
 import { GetUserService } from 'src/app/services/get-user.service';
 
+
 @Component({
   selector: 'app-github-user-search',
   templateUrl: './github-user-search.component.html',

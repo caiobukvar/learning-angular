@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { FormTestComponent } from './components/form-test/form-test.component';
+import { AngularMaterialComponent } from './components/angular-material/angular-material.component';
 import { GithubUserSearchComponent } from './components/github-user-search/github-user-search.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
   { path: 'form-test', component: FormTestComponent },
-  { path: 'github-user', component: GithubUserSearchComponent }
+  { path: 'github-user', component: GithubUserSearchComponent },
+  { path: 'angular-material', component: AngularMaterialComponent }
 ];
 
 @NgModule({
