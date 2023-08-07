@@ -16,9 +16,10 @@
 
 .navbar>nav {
   display: flex;
-  justify-content: space-between;
-  max-width: 600px;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  gap: 10px;
   padding: 10px;
   color: #eca72cff;
 }
@@ -27,8 +28,8 @@
   color: #eca72cff;
   text-decoration: none;
   font-weight: 600;
-  width: 150px;
   text-align: center;
+  padding: 0 20px;
 }
 
 .date {
@@ -37,4 +38,9 @@
 
 .date>p {
   text-align: center;
+}
+
+.mat-divider {
+  height: 15px;
+  border-right-color: #eca72cff !important;
 }

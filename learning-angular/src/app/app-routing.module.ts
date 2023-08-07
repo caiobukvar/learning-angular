@@ -7,7 +7,7 @@ import { GithubUserSearchComponent } from './components/github-user-search/githu
 const routes: Routes = [
   { path: '', component: MainPageComponent },
   { path: 'form-test', component: FormTestComponent },
-  { path: 'github-user', component: GithubUserSearchComponent }
+  { path: 'github-user', component: GithubUserSearchComponent },
 ];
 
 @NgModule({
